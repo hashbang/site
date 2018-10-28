@@ -16,8 +16,7 @@ RUN LC_ALL=C \
 
 ADD ./ /opt/app/
 WORKDIR /opt/app
-RUN pip install -r requirements.txt
 
-EXPOSE 4443
+EXPOSE 8080
 
 CMD ["python2.7", "server.py"]
