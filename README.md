@@ -14,15 +14,10 @@ This allows both bash and browsers to render this document appropriately.
     ```
     make
     ```
+
 2. Build/push new docker container
 
     ```
-    docker build -t hashbang/hashbang.sh .
-    docker push hashbang/hashbang.sh
-    ```
-
-3. Restart systemd service on production CoreOS machine
-
-    ```
-    ssh core@hashbang.sh sudo systemctl restart hashbangsh
+    docker build -t hashbang/site .
+    docker push hashbang/site
     ```
