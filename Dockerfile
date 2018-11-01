@@ -1,18 +1,5 @@
-FROM debian:stretch
-
-RUN LC_ALL=C \
-    DEBIAN_FRONTEND=noninteractive \
-    apt-get update && \
-    apt-get install -y \
-        ca-certificates \
-        git \
-        python-flask-restful \
-        python-ldap \
-        python-tornado \
-        python-pip \
-        && \
-    apt-get clean && \
-    rm -rf /tmp/* /var/tmp/*
+FROM python:3-alpine
+MAINTAINER Hashbang Team <team@hashbang.sh>
 
 ADD ./ /opt/app/
 WORKDIR /opt/app
