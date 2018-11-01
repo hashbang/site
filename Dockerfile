@@ -1,8 +1,10 @@
-FROM python:3-alpine
+FROM python:2-alpine
 MAINTAINER Hashbang Team <team@hashbang.sh>
 
 ADD ./ /opt/app/
 WORKDIR /opt/app
+
+RUN apk add py2-flask
 
 EXPOSE 8080
 
